@@ -12,7 +12,7 @@
         state: present
       when:
         - ansible_distribution == "Ubuntu"
-     - name: run container
+    - name: run container
        docker_container:
         name: apache2
         state: present
