@@ -1,5 +1,5 @@
 - hosts: webserver
-  task:
+  tasks:
     - name: install python-docker
       yum:
         name: python-docker
