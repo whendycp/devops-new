@@ -1,0 +1,21 @@
+- hosts: webserver
+  task:
+    - name: install python-docker
+      yum:
+        name: python-docker
+        state: present
+      when:
+        - ansible_distribution == "CentOS"
+    - name: install pyton-docker
+      apt:
+        name: pyton-docker
+        state: present
+      when:
+        - ansible_distribution == "Ubuntu"
+     - name: run container
+       docker_container:
+        name: apache2
+        state: present
+        image: whendycp/httpd:5
+        published_ports:
+          - 8081:80
