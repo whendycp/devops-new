@@ -13,9 +13,9 @@
       when:
         - ansible_distribution == "Ubuntu"
     - name: run container
-        docker_container:
-          name: apache2
-          state: present
-          image: whendycp/httpd:3
+      docker_container:
+        name: apache2
+        state: present
+        image: whendycp/httpd:3
         published_ports:
           - 8081:80
