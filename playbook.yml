@@ -16,6 +16,6 @@
        docker_container:
         name: apache2
         state: present
-        image: whendycp/httpd:5
+        image: whendycp/httpd:3
         published_ports:
           - 8081:80
